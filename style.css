@@ -7,3 +7,131 @@ body {
   margin: auto;
   width: 1000px;
 }
+
+html{
+   width: 100%;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+.login_screen{
+  background-image: url("pics/login_background.jpeg");
+  /*https://www.pexels.com/photo/white-and-gray-pen-beside-succulent-flower-and-white-line-paper-near-orange-ceramic-mug-with-black-coffee-64778/*/ 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;   
+    max-width: 1960px;
+    max-height: 1080px;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+.login_wrapper{
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  /* half of #content height*/
+  left: 0;
+  width: 100%;
+}
+
+#login_window{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 295px;
+  /*border: 1px dashed #000;*/
+  box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  
+}
+
+#login_logo{
+  position: relative;
+  margin: auto;
+  align-content: center;
+  text-align: center;
+  height:100px;
+  width:400px;
+  background-image: url("pics/logo.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#login_rows{
+  position: relative;
+  margin: auto;
+  width:  300px;
+}
+
+td{
+  padding: 5px;
+}
+
+.login_lines{
+  width: 300px;
+  height: 30px;
+  font-size: 16px;
+  outline:none;
+
+}
+
+#login_button_wrapper{
+  position: relative;
+  top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 0;
+    width:300px;
+    height:30px;
+}
+#login_button{
+  width: 315px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border:none;
+  font-size: 18px;
+  outline:none;
+
+}
+
+#login_button:hover{
+box-shadow: 0 0 4px #fff;
+}
+
+input{
+    padding:5px; 
+    border:2px solid #fff; 
+    -webkit-border-radius: 5px;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+
+
+}
+
+input::-webkit-input-placeholder {
+    color:white;
+    opacity: 0.6;
+}
+input:-moz-placeholder {
+    color:white;
+    opacity: 0.6;
+}
+input:-ms-input-placeholder {
+    opacity: 0.6; 
+    color:white;
+}
