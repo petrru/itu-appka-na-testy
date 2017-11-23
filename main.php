@@ -16,19 +16,47 @@ DB::init_conn();
           rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-<h1>Aplikace na generování testů</h1>
-<a href="/itu/new" class="btn"><i class="material-icons">add</i> Nový test</a>
-<br>
-<?php
-$test = new Test;
-$q = $test->prepare("select test_id, name from tests where user_id = ?");
-$q->bindValue(1, 1);
-$q->execute();
-while ($q->fetch()) {
-    echo "* " . $test->name . "<br>";
-}
-//echo $_GET['p'];
-?>
+<body class="main_screen">
+    <div class="content">
+        <h1>Aplikace na generování testů</h1>
+        <a href="/itu/new" class="btn"><i class="material-icons">add</i> Nový test</a>
+        <!--<div class="test_wrapper">
+            <table class="test_lines">
+                <tr class="first_row">
+                <td class= "test_name">1. světová válka</td>
+                <td class= "test_buttons" rowspan="2">
+                <a href="/itu/new" class="btn"><div>Edit<i class="material-icons">keyboard_arrow_right</i></div></a>
+                <a href="/itu/new" class="btn btn_menu"><div><i class="material-icons">more_vert</i></div></a>
+                </td>
+                </tr>
+                <tr class="second_row">
+                    <td class="test_info">160 otázek, 8 skupin</td>
+                </tr>
+            </table>
+        </div>!-->
+            <?php
+            $test = new Test;
+            $q = $test->prepare("select test_id, name from tests where user_id = ?");
+            $q->bindValue(1, 1);
+            $q->execute();
+            while ($q->fetch()) {
+                echo "<div class=\"test_wrapper\">
+                      <table class=\"test_lines\">
+                      <tr class=\"first_row\">
+                      <td class= \"test_name\">" . $test->name . "</td>
+                      <td class= \"test_buttons\" rowspan=\"2\">
+                <a href=\"/itu/new\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
+                 <a href=\"/itu/new\" class=\"btn btn_menu\"><div><i class=\"material-icons\">more_vert</i></div></a>
+                     </td>
+                    </tr>
+                     <tr class=\"second_row\">
+                    <td class=\"test_info\">160 otázek, 8 skupin</td>
+                    </tr>
+                    </table>
+                     </div>";
+            }
+            //echo $_GET['p'];
+            ?>
+    </div>
 </body>
 </html>
