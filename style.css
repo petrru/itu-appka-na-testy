@@ -155,8 +155,7 @@ input:-ms-input-placeholder {
    background-repeat: no-repeat;
   -moz-background-size: cover;
   -webkit-background-size: cover;
-  -o-background-size: cover; 
-
+  -o-background-size: cover;
 }
 
 .content{
@@ -166,7 +165,8 @@ input:-ms-input-placeholder {
   background-color: rgba(0, 0, 0, 0.5); 
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
 }
 
 .test_wrapper{
@@ -189,8 +189,8 @@ input:-ms-input-placeholder {
   margin:auto;
 }
 
-.test_buttons .btn div, .test_buttons .btn_menu div {
-  padding-top: 5px;
+.btn div, .test_buttons .btn_menu div {
+  padding-top: 2px;
 }
 
 .test_buttons .btn_menu
@@ -226,5 +226,131 @@ input:-ms-input-placeholder {
   font-size: 16px;
 }
 
-td{
+.content_header
+{
+  height: 15%;
+}
+
+.content_header h1{
+  padding-top: 2%;
+  text-align: center;
+  padding-right: 10%;
+}
+
+#main_logo{
+  position: relative;
+  height:100px;
+  width:400px;
+  background-image: url("pics/logo.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  float:left;
+}
+
+.content_content{
+  clear:left;
+  height: 100%;
+  width: 100%;
+}
+
+.test_edit{
+  height: 100%;
+  width: 95%;
+  margin: auto;
+}
+
+.test_edit th, .test_edit td{
+}
+
+.test_edit td{
+  width: 100%;
+  font-size: 18pt;
+  padding: 0.7%;
+}
+
+.question_number{
+  height:50%;
+}
+
+.test_input_wrapper{
+  height: 50%;
+}
+
+.test_input{
+  width: 100%;
+  border: 1px solid;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  height: 100%;
+  max-height: 60px;
+  font-size: 18pt;
+  font-family: "Comic Sans MS";
+  padding: 0;
+}
+
+.test_options{
+  height: 100%;
+  width: 100%;
+  border: 1px solid;
+  table-layout: fixed;
+  margin: auto;
+}
+
+.test_options tr{
+}
+
+.test_options td, .test_options th{
+}
+
+.add_option_button{
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border:none;
+  font-size: 18px;
+  outline:none;
+  font-family:"Comic Sans MS"; 
+}
+
+.add_option_column
+{
+  width:10%;
+  vertical-align: top;
+  align-content: top;
+}
+
+.test_options_desc
+{
+  align-content: right;
+  text-align: right;
+  vertical-align: top;
+}
+
+.select_answer_format
+{
+  font-size: 16pt;
+  width:100%;
+  color:white;
+  background: rgba(0,0,0,0.7);
+  font-family: "Comic Sans MS";
+
+}
+
+.option_list
+{
+  list-style-type: none;
+  margin-top:-1%;
+}
+
+input[type=checkbox]{
+  border:2px solid #fff; 
+  -webkit-border-radius: 5px;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color:white;
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  margin-right: 2%;
 }
