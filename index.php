@@ -13,12 +13,13 @@
         </div>
           <table id='login_rows'>
             <tr>
-              <td><input class='login_lines' type="text" name="nick" placeholder="Login"  tabindex="1" /></td>
+              <td><input class='login_lines' type="text" name="nick"
+                         placeholder="Login" tabindex="1"
+                         value="<?php echo $_GET['nick'] ?? '';?>" /></td>
             </tr>
             <tr>
               <td><input class='login_lines' type="password" name="heslo"
-                         placeholder="Password" tabindex="2"
-                         value="<?php echo $_GET['nick'] ?? '';?>" /></td>
+                         placeholder="Password" tabindex="2" /></td>
             </tr>
             <tr>
               <td colspan="2" >
