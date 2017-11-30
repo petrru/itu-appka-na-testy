@@ -1,8 +1,5 @@
 <?php
-spl_autoload_register(function ($class_name) {
-    include_once $class_name . '.php';
-});
-DB::init_conn();
+require_once "init.php";
 ?>
 <!doctype html>
 <html>
@@ -14,12 +11,12 @@ DB::init_conn();
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-    <title>Document</title>
+    <title>Seznam testů</title>
 </head>
 <body class="main_screen">
     <div class="content">
         <h1>Aplikace na generování testů</h1>
-        <a href="/itu/new" class="btn"><i class="material-icons">add</i> Nový test</a>
+        <a href="create_test.php" class="btn"><i class="material-icons">add</i> Nový test</a>
         <!--<div class="test_wrapper">
             <table class="test_lines">
                 <tr class="first_row">

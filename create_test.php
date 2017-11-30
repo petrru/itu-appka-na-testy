@@ -1,8 +1,5 @@
 <?php
-spl_autoload_register(function ($class_name) {
-    include_once $class_name . '.php';
-});
-DB::init_conn();
+require_once "init.php";
 ?>
 <!doctype html>
 <html>
@@ -14,7 +11,9 @@ DB::init_conn();
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="create_test.js"></script>
+    <title>Nový test</title>
 </head>
 <body class="main_screen">
     <div class="content">
@@ -23,15 +22,55 @@ DB::init_conn();
         </div>
             <h1>Nový test</h1>
         </div>
-        <div class="content_content">
+        <div class="content_content test_edit">
+            <div class="question_number">
+                Název testu
+                <br>
+                <input class='test_input' id="test_name" type="text" name="nick"/>
+            </div>
+            <div class="question">
+                <div class="question_number">
+                    Otázka 1
+                </div>
+                <table class="test_options">
+                    <tr>
+                        <td colspan="3"> <input class='test_input' type="text" name="nick"/> </td>
+                    </tr>
+                    <tr style="height: 10%;">
+                        <td class="add_option_column" rowspan="3">
+                            <ul class="option_list">
+                                <li><input type="checkbox" name="vehicle" value="Bike"> I have a bike</li>
+                                <li><input type="checkbox" name="vehicle" value="Bike"> Přidat odpověd</li>
+                            </ul>
+                        </td>
+                        <td class="test_options_desc">Formát odpovědi:</td>
+                        <td class="test_options_desc">
+                            <select class="select_answer_format">
+                                <option value="auto">Auto (jedna správná)</option>
+                                <option value="full_text">Full text</option>
+                                <option value="multiple">Více správných</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="test_options_desc"></td>
+                        <td class="test_options_desc">
+                            <select class="select_answer_format">
+                                <option value="auto">Další možnosti</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        <!--
         <table class="test_edit">
         <tr class="question_number">
         <td>Název testu</td>
         </tr>
         <tr class="test_input_wrapper">
-        <td><input class='test_input' type="text" name="nick"/></td>
+        <td><input class='test_input' id="test_name" type="text" name="nick"/></td>
         </tr>
-        <!-- Každá otázka musí vygenerovat toto celé -->
+        <!-- Každá otázka musí vygenerovat toto celé -- >
         <tr class="question_number">
         <td>Otázka 1</td>
         </tr>
@@ -67,7 +106,7 @@ DB::init_conn();
                </tr>
             </table>
             </tr>
-            <!-- Konec otázky -->
+        <!-- Konec otázky -- >
         <tr class="question_number">
         <td>Otázka 2</td>
         </tr>
@@ -102,13 +141,12 @@ DB::init_conn();
                     </td>
                </tr>
             </table>
-            </tr>
         </td>
         </tr>
         <tr>
         <td><input id='login_button' type="submit" name="submit" value="Uložit" tabindex="3"/></td>
         </tr>
-        </table>
+        </table>-->
 
         </div>
     </div>

@@ -1,55 +1,53 @@
 a.btn {
   display: inline-block;
-  color: black;
   text-decoration: none;
   width: 15%;
   height: 4%;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
-  outline:none;
-  padding:5px; 
-  border:2px solid #fff; 
-  color:white;
+  outline: none;
+  padding: 5px;
+  border: 2px solid #fff;
+  color: white;
   text-align: center;
   margin-left: 3%;
   margin-bottom: 2%;
 }
-
+a.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 body {
   margin: auto;
   width: 100%;
-  height:95%;
+  height: 95%;
 }
-
-html{
-   width: 100%;
-    font-family: "Comic Sans MS";
-    color:white;
-    height: 100%;
+html {
+  width: 100%;
+  font-family: "Comic Sans MS", sans-serif;
+  color: white;
+  height: 100%;
 }
-
-.login_screen{
+.login_screen {
   background-image: url("pics/login_background.jpeg");
-  /*https://www.pexels.com/photo/white-and-gray-pen-beside-succulent-flower-and-white-line-paper-near-orange-ceramic-mug-with-black-coffee-64778/*/ 
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0;
-    margin: 0;
-    background-attachment: fixed;   
-    max-width: 1960px;
-    max-height: 1080px;
-    background-repeat: no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    width: 100%;
-    font-family: sans-serif;
-    height: 100%;
+  /*https://www.pexels.com/photo/white-and-gray-pen-beside-succulent-flower-and-white-line-paper-near-orange-ceramic-mug-with-black-coffee-64778/*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  background-attachment: fixed;
+  max-width: 1960px;
+  max-height: 1080px;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  font-family: sans-serif;
+  height: 100%;
 }
-
-.login_wrapper{
+.login_wrapper {
   position: absolute;
   top: 50%;
   margin-top: -150px;
@@ -57,8 +55,7 @@ html{
   left: 0;
   width: 100%;
 }
-
-#login_window{
+#login_window {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -66,218 +63,177 @@ html{
   /*border: 1px dashed #000;*/
   box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.5);
   padding: 40px;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  
 }
-
-#login_logo{
+#login_logo {
   position: relative;
   margin: auto;
   align-content: center;
   text-align: center;
-  height:100px;
-  width:400px;
+  height: 100px;
+  width: 400px;
   background-image: url("pics/logo.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: left top;
 }
-
-#login_rows{
+#login_rows {
   position: relative;
   margin: auto;
-  width:  300px;
+  width: 300px;
 }
-
-.login_window td{
+.login_window td {
   padding: 5px;
 }
-
-.login_lines{
+.login_lines {
   width: 300px;
   height: 30px;
   font-size: 16px;
-  outline:none;
-
+  outline: none;
 }
-
-#login_button_wrapper{
+#login_button_wrapper {
   position: relative;
   top: 0;
-    bottom: 0;
-    left: 0%;
-    right: 0;
-    width:300px;
-    height:30px;
+  bottom: 0;
+  left: 0%;
+  right: 0;
+  width: 300px;
+  height: 30px;
 }
-#login_button{
+#login_button {
   width: 315px;
   height: 45px;
   background-color: rgba(0, 0, 0, 0.7);
-  border:none;
+  border: none;
   font-size: 18px;
-  outline:none;
-
+  outline: none;
 }
-
-#login_button:hover{
-box-shadow: 0 0 4px #fff;
+#login_button:hover {
+  box-shadow: 0 0 4px #fff;
 }
-
-input{
-    padding:5px; 
-    border:2px solid #fff; 
-    -webkit-border-radius: 5px;
-    border-radius: 7px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color:white;
+input {
+  padding: 5px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
-
 input::-webkit-input-placeholder {
-    color:white;
-    opacity: 0.6;
+  color: white;
+  opacity: 0.6;
 }
 input:-moz-placeholder {
-    color:white;
-    opacity: 0.6;
+  color: white;
+  opacity: 0.6;
 }
 input:-ms-input-placeholder {
-    opacity: 0.6; 
-    color:white;
+  opacity: 0.6;
+  color: white;
 }
-
-.main_screen
-{
+.main_screen {
   background-image: url("pics/login_background.jpeg");
   background-attachment: fixed;
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
 }
-
-.content{
-  width:70%;
-  margin:auto;
-   box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5); 
+.content {
+  width: 70%;
+  margin: auto;
+  box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
   border-radius: 5px;
   height: auto;
   min-height: 100%;
 }
-
-.test_wrapper{
-  width:95%;
-  height:10%;
+.test_wrapper {
+  width: 95%;
+  height: 10%;
   border: 1px solid;
-  margin:auto;
+  margin: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
-.material-icons
-{
+.material-icons {
   vertical-align: middle;
 }
-
-.test_buttons .btn{
+.test_buttons .btn {
   width: 60%;
   height: 50%;
   padding: 0;
-  margin:auto;
+  margin: auto;
 }
-
-.btn div, .test_buttons .btn_menu div {
+.btn div,
+.test_buttons .btn_menu div {
   padding-top: 2px;
 }
-
-.test_buttons .btn_menu
-{
-  width:20%;
+.test_buttons .btn_menu {
+  width: 20%;
   margin-left: -3%;
 }
-
-.test_lines{
-  width:100%;
-  height:100%;
+.test_lines {
+  width: 100%;
+  height: 100%;
 }
-
-.test_lines th, .test_lines td{
+.first_row {
+  height: 60%;
 }
-
-.first_row{
-  height:60%;
-}
-
-.test_name{
-  width:80%;
+.test_name {
+  width: 80%;
   padding-left: 2%;
   font-size: 32px;
 }
-
-.test_buttons{
-  width:20%;
+.test_buttons {
+  width: 20%;
 }
-
-.test_info{
+.test_info {
   padding-left: 2%;
   font-size: 16px;
 }
-
-.content_header
-{
+.content_header {
   height: 15%;
 }
-
-.content_header h1{
+.content_header h1 {
   padding-top: 2%;
   text-align: center;
   padding-right: 10%;
 }
-
-#main_logo{
+#main_logo {
   position: relative;
-  height:100px;
-  width:400px;
+  height: 100px;
+  width: 400px;
   background-image: url("pics/logo.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: left top;
-  float:left;
+  float: left;
 }
-
-.content_content{
-  clear:left;
+.content_content {
+  clear: left;
   height: 100%;
   width: 100%;
 }
-
-.test_edit{
+.test_edit {
   height: 100%;
   width: 95%;
   margin: auto;
 }
-
-.test_edit th, .test_edit td{
-}
-
-.test_edit td{
+.test_edit {
   width: 100%;
-  font-size: 18pt;
+  font-size: 14pt;
   padding: 0.7%;
 }
-
-.question_number{
-  height:50%;
-}
-
-.test_input_wrapper{
+.question_number {
   height: 50%;
 }
-
-.test_input{
+.test_input_wrapper {
+  height: 50%;
+}
+.test_input {
   width: 100%;
   border: 1px solid;
   border-radius: 0px;
@@ -288,69 +244,68 @@ input:-ms-input-placeholder {
   font-family: "Comic Sans MS";
   padding: 0;
 }
-
-.test_options{
+.test_options {
   height: 100%;
   width: 100%;
   border: 1px solid;
   table-layout: fixed;
   margin: auto;
 }
-
-.test_options tr{
-}
-
-.test_options td, .test_options th{
-}
-
-.add_option_button{
+.add_option_button {
   width: 40%;
   background-color: rgba(0, 0, 0, 0.7);
-  border:none;
+  border: none;
   font-size: 18px;
-  outline:none;
-  font-family:"Comic Sans MS"; 
+  outline: none;
+  font-family: "Comic Sans MS";
 }
-
-.add_option_column
-{
-  width:10%;
+.add_option_column {
+  width: 10%;
   vertical-align: top;
   align-content: top;
 }
-
-.test_options_desc
-{
+.test_options_desc {
   align-content: right;
   text-align: right;
   vertical-align: top;
 }
-
-.select_answer_format
-{
+.select_answer_format {
   font-size: 16pt;
-  width:100%;
-  color:white;
-  background: rgba(0,0,0,0.7);
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
   font-family: "Comic Sans MS";
-
 }
-
-.option_list
-{
+.option_list {
   list-style-type: none;
-  margin-top:-1%;
+  margin-top: -1%;
 }
-
-input[type=checkbox]{
-  border:2px solid #fff; 
+input[type=checkbox] {
+  border: 2px solid #fff;
   -webkit-border-radius: 5px;
   border-radius: 7px;
   background-color: rgba(0, 0, 0, 0.5);
-  color:white;
-  -ms-transform: scale(1.5); /* IE */
-  -moz-transform: scale(1.5); /* FF */
-  -webkit-transform: scale(1.5); /* Safari and Chrome */
-  -o-transform: scale(1.5); /* Opera */
+  color: white;
+  -ms-transform: scale(1.5);
+  /* IE */
+  -moz-transform: scale(1.5);
+  /* FF */
+  -webkit-transform: scale(1.5);
+  /* Safari and Chrome */
+  -o-transform: scale(1.5);
+  /* Opera */
   margin-right: 2%;
 }
+/*a.btn {
+  display: inline-block;
+  //background-color: #0000aa;
+  color: black;
+  text-decoration: none;
+  //border: 1px solid black;
+
+}
+
+body {
+  margin: auto;
+  width: 1000px;
+}*/

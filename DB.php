@@ -8,8 +8,7 @@ class DB
 
     public static function init_conn() {
         $str = "mysql:host=localhost;dbname=itu;charset=utf8mb4";
-        self::$conn = new PDO($str,
-                              "root", "root");
+        self::$conn = new PDO($str, "root", "root");
     }
 
     public static function prepare($cmd) {
