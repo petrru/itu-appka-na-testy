@@ -33,21 +33,22 @@ require_once "init.php";
         </div>!-->
             <?php
             $test = new Test;
-            $q = $test->prepare("select test_id, name from tests where user_id = ?");
+            $q = $test->prepare("select test_id, name, data from tests where user_id = ?");
             $q->bindValue(1, 1);
             $q->execute();
             while ($q->fetch()) {
+                $q_cnt = substr_count($test->data, '"options"');
                 echo "<div class=\"test_wrapper\">
                       <table class=\"test_lines\">
                       <tr class=\"first_row\">
                       <td class= \"test_name\">" . $test->name . "</td>
                       <td class= \"test_buttons\" rowspan=\"2\">
-                <a href=\"/itu/new\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
+                <a href=\"/itu/create_test.php?id={$test->test_id}\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
                  <a href=\"/itu/new\" class=\"btn btn_menu\"><div><i class=\"material-icons\">more_vert</i></div></a>
                      </td>
                     </tr>
                      <tr class=\"second_row\">
-                    <td class=\"test_info\">160 otázek, 8 skupin</td>
+                    <td class=\"test_info\">$q_cnt otázek</td>
                     </tr>
                     </table>
                      </div>";

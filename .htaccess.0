@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule ^([a-z-]*)$ main.php?p=$1   [QSA]

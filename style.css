@@ -115,11 +115,19 @@ html {
 }
 input {
   padding: 5px;
-  border: 2px solid #fff;
-  -webkit-border-radius: 5px;
-  border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
+}
+input:not(.answer) {
+  border: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  -webkit-border-radius: 5px;
+}
+input.answer {
+  width: 300px;
+  background: transparent;
+  border: none;
+  /*border-bottom: 1px solid #fff;*/
 }
 input::-webkit-input-placeholder {
   color: white;
@@ -132,6 +140,19 @@ input:-moz-placeholder {
 input:-ms-input-placeholder {
   opacity: 0.6;
   color: white;
+}
+.remove-answer {
+  cursor: pointer;
+  opacity: .65;
+}
+.answers li:nth-last-child(2) .remove-answer {
+  display: none;
+}
+.full-text .answers li:not(:first-child) {
+  display: none;
+}
+.full-text .answers li *:not(.answer) {
+  display: none;
 }
 .main_screen {
   background-image: url("pics/login_background.jpeg");
@@ -222,7 +243,7 @@ input:-ms-input-placeholder {
   width: 95%;
   margin: auto;
 }
-.test_edit {
+.test_edit_id {
   width: 100%;
   font-size: 14pt;
   padding: 0.7%;
@@ -241,15 +262,23 @@ input:-ms-input-placeholder {
   height: 100%;
   max-height: 60px;
   font-size: 18pt;
-  font-family: "Comic Sans MS";
+  font-family: "Comic Sans MS", sans-serif;
   padding: 0;
 }
 .test_options {
   height: 100%;
   width: 100%;
   border: 1px solid;
-  table-layout: fixed;
   margin: auto;
+}
+.test_options tr td:nth-child(1) {
+  width: 450px;
+}
+.test_options tr td:nth-child(2) {
+  width: 150px;
+}
+.test_options tr td:nth-child(3) {
+  width: 400px;
 }
 .add_option_button {
   width: 40%;
@@ -257,10 +286,9 @@ input:-ms-input-placeholder {
   border: none;
   font-size: 18px;
   outline: none;
-  font-family: "Comic Sans MS";
+  font-family: "Comic Sans MS", sans-serif;
 }
 .add_option_column {
-  width: 10%;
   vertical-align: top;
   align-content: top;
 }
@@ -269,12 +297,13 @@ input:-ms-input-placeholder {
   text-align: right;
   vertical-align: top;
 }
-.select_answer_format {
+.q_options {
   font-size: 16pt;
   width: 100%;
   color: white;
   background: rgba(0, 0, 0, 0.7);
-  font-family: "Comic Sans MS";
+  font-family: "Comic Sans MS", sans-serif;
+  margin-bottom: 7px;
 }
 .option_list {
   list-style-type: none;
@@ -296,16 +325,7 @@ input[type=checkbox] {
   /* Opera */
   margin-right: 2%;
 }
-/*a.btn {
-  display: inline-block;
-  //background-color: #0000aa;
-  color: black;
-  text-decoration: none;
-  //border: 1px solid black;
-
+.sample_question,
+.sample_answer {
+  display: none;
 }
-
-body {
-  margin: auto;
-  width: 1000px;
-}*/

@@ -1,4 +1,5 @@
 <?php
+$do_not_verify_username = true;
 require_once "init.php";
 $q = DB::prepare("select user_id, `password` from users WHERE name = ?");
 $q->execute([$_POST['nick'] ?? '']);

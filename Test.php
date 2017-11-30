@@ -8,7 +8,7 @@
 
 class Test
 {
-    public $test_id, $name, $user_id;
+    public $test_id, $name, $user_id, $data;
 
     /**
      * @return PDOStatement
