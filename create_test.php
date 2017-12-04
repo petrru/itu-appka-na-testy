@@ -89,6 +89,7 @@ require_once "init.php";
                 </table>
             </div>
             <input class="control_buttons" type="submit" value="Uložit změny">
+            <span class="saved">Uloženo&nbsp;&nbsp;</span>
             <input class="control_buttons" type="button" value="Přidat otázku" id="add-q">
             <input class="control_buttons" type="button" value="Smazat test" id="del-t">
             <input class="control_buttons" type="button" value="Vytiskout" id="print-t">

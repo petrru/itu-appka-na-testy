@@ -171,6 +171,9 @@ $(window).on('load', function () {
             if (b === 'ok-new') {
                 window.location.replace("main.php?new-success");
             }
+            else if (b === 'ok-edit') {
+                $(".saved").show().delay(1000).fadeOut();
+            }
             else {
                 console.log(b);
             }
