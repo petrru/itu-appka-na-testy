@@ -23,19 +23,27 @@ require_once "init.php";
                 <td class= "test_name">1. světová válka</td>
                 <td class= "test_buttons" rowspan="2">
                 <a href="/itu/new" class="btn"><div>Edit<i class="material-icons">keyboard_arrow_right</i></div></a>
-                <a href="/itu/new" class="btn btn_menu"><div><i class="material-icons">more_vert</i></div></a>
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">More</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Smazat test</a>
+                    <a href="#">Vytisknout test</a>
+                    <a href="#">Sdílet test</a>
+                  </div>
+                </div>
                 </td>
                 </tr>
                 <tr class="second_row">
                     <td class="test_info">160 otázek, 8 skupin</td>
                 </tr>
             </table>
-        </div>!-->
+        </div>-->
             <?php
             $test = new Test;
             $q = $test->prepare("select test_id, name, data from tests where user_id = ?");
             $q->bindValue(1, 1);
             $q->execute();
+            $i = 0;
             while ($q->fetch()) {
                 $q_cnt = substr_count($test->data, '"options"');
                 echo "<div class=\"test_wrapper\">
@@ -43,9 +51,15 @@ require_once "init.php";
                       <tr class=\"first_row\">
                       <td class= \"test_name\">" . $test->name . "</td>
                       <td class= \"test_buttons\" rowspan=\"2\">
-                <a href=\"create_test.php?id={$test->test_id}\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
-                 <a href=\"#\" class=\"btn btn_menu\"><div><i class=\"material-icons\">more_vert</i></div></a>
-                 <!-- Odkaz na smazaní: href='delete_test.php?id={$test->test_id}' -->
+                <a href=\"/itu/create_test.php?id={$test->test_id}\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
+                    <div class=\"dropdown\">
+                  <button id =\"" . $i . "\"onclick=\"myFunction(this.id)\" class=\"dropbtn\">More</button>
+                  <div id=\"myDropdown" . $i++ ."\" class=\"dropdown-content\">
+                    <a href=\"delete_test.php?id={$test->test_id}\">Smazat test</a>
+                    <a href=\"#\">Vytisknout test</a>
+                    <a href=\"#\">Sdílet test</a>
+                  </div>
+                </div>
                      </td>
                     </tr>
                      <tr class=\"second_row\">
@@ -57,5 +71,27 @@ require_once "init.php";
             //echo $_GET['p'];
             ?>
     </div>
+
+
+    <script>
+    function myFunction(id) {
+    var items = document.getElementsByClassName("dropdown-content");
+    items[id].classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}</script>
 </body>
 </html>

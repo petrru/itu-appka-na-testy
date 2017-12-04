@@ -348,3 +348,61 @@ input[type=checkbox] {
   font-size: 14pt;
   font-family: "Comic Sans MS";
 }
+
+/*dropdown*/
+
+/* Dropdown Button */
+.dropbtn {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 12pt;
+    outline: none;
+    padding: 10%;
+    padding-bottom: 23%;
+    border: 2px solid #fff;
+    border-left: 0px;
+    color:white;
+    margin-left: -13%;
+    height: 100%;
+  font-family: "Comic Sans MS";
+
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+h1{
+  font-size: 28pt;
+}
