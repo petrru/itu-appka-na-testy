@@ -29,10 +29,10 @@ for ($i = 1; $i <= $_POST['groups']; $i++) {
     echo "<h1>Skupina " . chr(0x40 + $i) ."</h1>";
     echo "<table border='0'>";
 
+    if (count($qs) < $_POST['qs'])
+        $qs = $d;
 
     for ($qi = 1; $qi <= $_POST['qs']; $qi++) {
-        if (count($qs) == 0)
-            $qs = $d;
         $q_no = mt_rand(0, count($qs) - 1);
         $q = $qs[$q_no];
         array_splice($qs, $q_no, 1);
