@@ -74,6 +74,7 @@ require_once "init.php";
 
 
     <script>
+    //Inspired by: https://www.w3schools.com/howto/howto_js_dropdown.asp
     function myFunction(id) {
     var items = document.getElementsByClassName("dropdown-content");
     items[id].classList.toggle("show");
