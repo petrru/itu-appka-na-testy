@@ -38,8 +38,8 @@ require_once "init.php";
     <title>Nový test</title>
 </head>
 <body class="main_screen">
-    <form class="save-all">
     <div class="content">
+    <form class="save-all">
         <div class="content_header">
             <a href="main.php"><div id='main_logo'></div></a>
             <h1>Nový test</h1>
@@ -90,12 +90,13 @@ require_once "init.php";
             </div>
             <input class="control_buttons" type="submit" value="Uložit změny">
             <input class="control_buttons" type="button" value="Přidat otázku" id="add-q">
-            <input class="control_buttons" type="button" value="Smazat test" id="del-q">
+            <input class="control_buttons" type="button" value="Smazat test" id="del-t">
+            <input class="control_buttons" type="button" value="Vytiskout" id="print-t">
 
         
 
         </div>
+        </form>
     </div>
-    </form>
 </body>
 </html>

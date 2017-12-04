@@ -183,10 +183,17 @@ $(window).on('load', function () {
     });
 
     /**
-     * Smazat otázku
+     * Smazat test
      */
-    $("#del-q").click(function () {
+    $("#del-t").click(function () {
         location.href = "delete_test.php?id=" + ID;
+    });
+
+    /**
+     * Vytisknout test
+     */
+    $("#print-t").click(function () {
+        location.href = "print_test.php?id=" + ID;
     });
 });
 
