@@ -56,7 +56,7 @@ require_once "init.php";
                   <button id =\"" . $i . "\"onclick=\"myFunction(this.id)\" class=\"dropbtn\">More</button>
                   <div id=\"myDropdown" . $i++ ."\" class=\"dropdown-content\">
                     <a href=\"delete_test.php?id={$test->test_id}\">Smazat test</a>
-                    <a href=\"#\">Vytisknout test</a>
+                    <a href=\"print_test.php?id={$test->test_id}\">Vytisknout test</a>
                     <a href=\"#\">Sdílet test</a>
                   </div>
                 </div>
