@@ -5,21 +5,52 @@ require_once "init.php";
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
-    <title>Tisk testu</title>
+    <link rel="stylesheet" href="print.css">
+    <title>​</title>
 </head>
-<body class="main_screen">
-<div class="content">
-    <h1>Vytiskout test</h1>
-    <form action="print_test_2.php?id<?php echo $_GET['id']; ?>"
-          method="post">
+<body>
+<?php
+$t = new Test();
+$q = $t->prepare("select * from tests WHERE user_id = ? and test_id = ?");
+$q->execute([$_SESSION['itu_uid'], $_GET['id']]);
+$q->fetch();
+$d = json_decode($t->data)->questions;
+/*echo "<pre>";
+var_dump($d);
+echo "</pre>";*/
 
-    </form>
-</div>
+if ($_POST['groups'] > 20)
+    $_POST['groups'] = 20;
+
+$qs = [];
+
+for ($i = 1; $i <= $_POST['groups']; $i++) {
+    echo '<div class="test">';
+    echo "<h1>Skupina " . chr(0x40 + $i) ."</h1>";
+    echo "<table border='0'>";
+
+
+    for ($qi = 1; $qi <= $_POST['qs']; $qi++) {
+        if (count($qs) == 0)
+            $qs = $d;
+        $q_no = mt_rand(0, count($qs) - 1);
+        $q = $qs[$q_no];
+        array_splice($qs, $q_no, 1);
+        echo "<tr><td><div class='q-no'>$qi</div></td>";
+        echo "<td><div class='q'><b>{$q->text}</b>";
+        $opt_i = 0;
+        foreach ($q->options as $option) {
+            $ch = chr(0x40 + ++$opt_i);
+            echo "<br>($ch) {$option->text}";
+        }
+
+        echo "</div><br></td></tr>";
+    }
+    echo "</table>";
+
+    echo "</div>";
+}
+
+?>
 </body>
 </html>
