@@ -81,7 +81,7 @@ require_once "init.php";
                             </select>
                             <select class="q_options" tabindex="-1">
                                 <option value="">Další možnosti</option>
-                                <option value="delete-q">Odstaranit otázku</option>
+                                <option value="delete-q">Odstranit otázku</option>
                             </select>
                         </td>
                     </tr>

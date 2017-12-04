@@ -43,8 +43,8 @@ require_once "init.php";
                       <tr class=\"first_row\">
                       <td class= \"test_name\">" . $test->name . "</td>
                       <td class= \"test_buttons\" rowspan=\"2\">
-                <a href=\"/itu/create_test.php?id={$test->test_id}\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
-                 <a href=\"/itu/new\" class=\"btn btn_menu\"><div><i class=\"material-icons\">more_vert</i></div></a>
+                <a href=\"create_test.php?id={$test->test_id}\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
+                 <a href=\"#\" class=\"btn btn_menu\"><div><i class=\"material-icons\">more_vert</i></div></a>
                      </td>
                     </tr>
                      <tr class=\"second_row\">
