@@ -26,7 +26,7 @@ $qs = [];
 
 for ($i = 1; $i <= $_POST['groups']; $i++) {
     echo '<div class="test">';
-    echo "<h1>Skupina " . chr(0x40 + $i) ."</h1>";
+    echo "<h1>{$t->name} - Skupina " . chr(0x40 + $i) ."</h1>";
     echo "<table border='0'>";
 
     if (count($qs) < $_POST['qs'])

@@ -83,6 +83,15 @@ $(window).on('load', function () {
         }
     })
     /**
+     * Stiknutí ctrl + +  -->  nová otázka
+     */
+    .keypress(function (e) {
+        if (e.which === 43 && e.originalEvent.ctrlKey) {
+            e.preventDefault();
+            $("#add-q").click();
+        }
+    })
+    /**
      * Změna zaškrtnutí správnosti odpovědi
      */
     .on("change", ".correct", function() {
