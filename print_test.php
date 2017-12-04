@@ -17,7 +17,7 @@ require_once "init.php";
 <?php
 $t = new Test();
 $q = $t->prepare("select * from tests WHERE user_id = ? and test_id = ?");
-//$q->execute([$_SESSION['itu_uid'], $_GET['id']]);
+$q->execute([$_SESSION['itu_uid'], $_GET['id']]);
 $q->fetch();
 $q_cnt = substr_count($t->data, '"options"');
 ?>
