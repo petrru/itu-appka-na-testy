@@ -33,6 +33,20 @@ require_once "init.php";
             }
         ?>
     </script>
+
+    <script type="text/javascript">
+                    function delete_test(test_id){
+                $.ajax({
+                    type: "POST",
+                    url: "delete_test.php",
+                    data: {test_id: test_id},
+                    success: function(html){
+                        location.href = "main.php";
+                    }
+                });
+            }
+    </script>
+
     <script src="create_test.js"></script>
     <title>Nový test</title>
 </head>
@@ -87,93 +101,11 @@ require_once "init.php";
                     </tr>
                 </table>
             </div>
-            <input type="submit" value="Uložit změny">
-            <input type="button" value="Přidat otázku" id="add-q">
-        <!--
-        <table class="test_edit">
-        <tr class="question_number">
-        <td>Název testu</td>
-        </tr>
-        <tr class="test_input_wrapper">
-        <td><input class='test_input' id="test_name" type="text" name="nick"/></td>
-        </tr>
-        <!-- Každá otázka musí vygenerovat toto celé -- >
-        <tr class="question_number">
-        <td>Otázka 1</td>
-        </tr>
-        <tr class="test_input_wrapper">
-        <td>
-            <table class="test_options">
-                <tr>
-                    <td colspan="3"> <input class='test_input' type="text" name="nick"/> </td>
-                </tr>
-                <tr style="height: 10%;">
-                    <td class="add_option_column" rowspan="3">
-                    <ul class="option_list">
-                    <li><input type="checkbox" name="vehicle" value="Bike"> I have a bike</li>
-                    <li><input type="checkbox" name="vehicle" value="Bike"> Přidat odpověd</li>
-                    </ul>
-                    </td>
-                    <td class="test_options_desc">Formát odpovědi:</td>
-                    <td class="test_options_desc">
-                        <select class="select_answer_format">
-                          <option value="auto">Auto (jedna správná)</option>
-                          <option value="full_text">Full text</option>
-                          <option value="multiple">Více správných</option>
-                        </select>
-                    </td>
-                </tr>
-               <tr> 
-                    <td class="test_options_desc"></td>                
-                    <td class="test_options_desc">
-                        <select class="select_answer_format">
-                          <option value="auto">Další možnosti</option>
-                        </select>
-                    </td>
-               </tr>
-            </table>
-            </tr>
-        <!-- Konec otázky -- >
-        <tr class="question_number">
-        <td>Otázka 2</td>
-        </tr>
-        <tr class="test_input_wrapper">
-        <td>
-            <table class="test_options">
-                <tr>
-                    <td colspan="3"> <input class='test_input' type="text" name="nick"/> </td>
-                </tr>
-                <tr style="height: 10%;">
-                    <td class="add_option_column" rowspan="3">
-                    <ul class="option_list">
-                    <li><input type="checkbox" name="vehicle" value="Bike"> I have a bike</li>
-                    <li><input type="checkbox" name="vehicle" value="Bike"> Přidat odpověd</li>
-                    </ul>
-                    </td>
-                    <td class="test_options_desc">Formát odpovědi:</td>
-                    <td class="test_options_desc">
-                        <select class="select_answer_format">
-                          <option value="auto">Auto (jedna správná)</option>
-                          <option value="full_text">Full text</option>
-                          <option value="multiple">Více správných</option>
-                        </select>
-                    </td>
-                </tr>
-               <tr> 
-                    <td class="test_options_desc"></td>                
-                    <td class="test_options_desc">
-                        <select class="select_answer_format">
-                          <option value="auto">Další možnosti</option>
-                        </select>
-                    </td>
-               </tr>
-            </table>
-        </td>
-        </tr>
-        <tr>
-        <td><input id='login_button' type="submit" name="submit" value="Uložit" tabindex="3"/></td>
-        </tr>
-        </table>-->
+            <input class="control_buttons" type="submit" value="Uložit změny">
+            <input class="control_buttons" type="button" value="Přidat otázku" id="add-q">
+            <input class="control_buttons" type="button" value="Smazat test">
+
+        
 
         </div>
     </div>

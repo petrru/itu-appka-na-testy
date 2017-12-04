@@ -127,6 +127,8 @@ input.answer {
   width: 300px;
   background: transparent;
   border: none;
+  font-size: 15pt;
+  font-family: "Comic Sans MS";
   /*border-bottom: 1px solid #fff;*/
 }
 input::-webkit-input-placeholder {
@@ -154,6 +156,7 @@ input:-ms-input-placeholder {
 .full-text .answers li *:not(.answer) {
   display: none;
 }
+
 .main_screen {
   background-image: url("pics/login_background.jpeg");
   background-attachment: fixed;
@@ -250,6 +253,7 @@ input:-ms-input-placeholder {
 }
 .question_number {
   height: 50%;
+  font-size: 16pt;
 }
 .test_input_wrapper {
   height: 50%;
@@ -328,4 +332,19 @@ input[type=checkbox] {
 .sample_question,
 .sample_answer {
   display: none;
+}
+
+.control_buttons{
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 15%;
+  height: 40px;
+  margin: 1%;
+  margin-left: 0;
+  cursor: pointer;
+  outline: none;
+  font-size: 14pt;
+  font-family: "Comic Sans MS";
 }
