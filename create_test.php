@@ -34,19 +34,6 @@ require_once "init.php";
         ?>
     </script>
 
-    <script type="text/javascript">
-                    function delete_test(test_id){
-                $.ajax({
-                    type: "POST",
-                    url: "delete_test.php",
-                    data: {test_id: test_id},
-                    success: function(html){
-                        location.href = "main.php";
-                    }
-                });
-            }
-    </script>
-
     <script src="create_test.js"></script>
     <title>Nový test</title>
 </head>
@@ -103,7 +90,7 @@ require_once "init.php";
             </div>
             <input class="control_buttons" type="submit" value="Uložit změny">
             <input class="control_buttons" type="button" value="Přidat otázku" id="add-q">
-            <input class="control_buttons" type="button" value="Smazat test">
+            <input class="control_buttons" type="button" value="Smazat test" id="del-q">
 
         
 

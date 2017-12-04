@@ -45,6 +45,7 @@ require_once "init.php";
                       <td class= \"test_buttons\" rowspan=\"2\">
                 <a href=\"create_test.php?id={$test->test_id}\" class=\"btn\"><div>Edit<i class=\"material-icons\">keyboard_arrow_right</i></div></a>
                  <a href=\"#\" class=\"btn btn_menu\"><div><i class=\"material-icons\">more_vert</i></div></a>
+                 <!-- Odkaz na smazaní: href='delete_test.php?id={$test->test_id}' -->
                      </td>
                     </tr>
                      <tr class=\"second_row\">

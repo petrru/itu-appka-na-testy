@@ -181,6 +181,13 @@ $(window).on('load', function () {
         });
         add_question(no);
     });
+
+    /**
+     * Smazat otázku
+     */
+    $("#del-q").click(function () {
+        location.href = "delete_test.php?id=" + ID;
+    });
 });
 
 function change_question_type(question_id) {
