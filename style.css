@@ -406,3 +406,12 @@ input[type=checkbox] {
 h1{
   font-size: 28pt;
 }
+
+.print_table{
+  margin:auto;
+  margin-top: 3%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 2%;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
